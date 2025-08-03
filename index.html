@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Weather Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1><span id="weather-icon">🌤️</span> AI Weather Companion</h1>
+            <div class="location-selector">
+                <input type="text" id="location-input" placeholder="Search for a city..." value="">
+                <button id="current-location-btn" title="Use current location">📍</button>
+                <button id="refresh-btn" title="Refresh">🔄</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="weather-display">
+                <div class="current-weather">
+                    <div id="current-location">Detecting your location...</div>
+                    <h2 id="temperature">...°C</h2>
+                    <p id="description">Loading weather data...</p>
+                    <div class="weather-details">
+                        <div class="weather-stat">
+                            <span class="label">Humidity</span>
+                            <span id="humidity" class="value">...%</span>
+                        </div>
+                        <div class="weather-stat">
+                            <span class="label">Wind</span>
+                            <span id="windSpeed" class="value">... m/s</span>
+                        </div>
+                        <div class="weather-stat">
+                            <span class="label">Pressure</span>
+                            <span id="pressure" class="value">... hPa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <h3>👕 What to Wear</h3>
+                    <ul id="clothing-recommendations">
+                        <li>Loading recommendations...</li>
+                    </ul>
+                </div>
+
+                <div class="recommendation-card">
+                    <h3>🎒 What to Carry</h3>
+                    <ul id="items-recommendations">
+                        <li>Loading recommendations...</li>
+                    </ul>
+                </div>
+
+                <div class="recommendation-card">
+                    <h3>🎯 Things to Do</h3>
+                    <div id="activities-recommendations">
+                        <p>Loading activity suggestions...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="personalized-tip">
+                <h3>💡 AI Personal Tip</h3>
+                <p id="personal-tip">Analyzing weather conditions for personalized recommendations...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
